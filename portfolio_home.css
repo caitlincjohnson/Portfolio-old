@@ -58,6 +58,13 @@ body {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
+  background-attachment: fixed;
+}
+
+@media only screen and (max-device-width: 1366px) {
+    .cover-container, .aboutme-container {
+        background-attachment: scroll;
+    }
 }
 
 .cover-heading {
@@ -67,6 +74,70 @@ body {
   font-style: normal;
   font-variant: normal;
   font-weight: 400;
+}
+
+/* arrow bounce */
+.downArrow{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -20px;
+  width: 40px;
+  height: 60px;
+}
+
+.bounce {
+	-moz-animation: bounce 3s infinite;
+	-webkit-animation: bounce 3s infinite;
+	animation: bounce 3s infinite;
+}
+@-moz-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -moz-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -moz-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+@-webkit-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -moz-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -moz-transform: translateY(-15px);
+    -ms-transform: translateY(-15px);
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
 }
 
 /* Portfolio section */
@@ -112,7 +183,7 @@ body {
 
 /* About Me Snippet section */
 .aboutme-container {
-  background-image:url(/Users/caitlincjohnson/Websites/Portfolio/version1/assets/valledeguadalupe.jpg);
+  background-image:url(/Users/caitlincjohnson/Websites/Portfolio/version1/assets/portrait3.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -124,6 +195,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background-attachment: fixed;
 }
 
 .aboutme-text {
