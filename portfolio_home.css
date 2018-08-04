@@ -16,9 +16,6 @@ html, body {
 }
 
 body {
-  display: -ms-flexbox;
-  display: flex;
-  flex-direction: column;
   color: #fff;
 }
 
@@ -72,4 +69,20 @@ body {
 .container-portfolio {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap row;
+  margin-bottom: 5%;
+}
+
+.section-heading {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  font-family: "Nixie One";
+  font-size: 36px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+}
+
+.portfolio-item {
+  
 }
