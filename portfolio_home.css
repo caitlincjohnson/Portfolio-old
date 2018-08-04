@@ -27,6 +27,11 @@ body {
  * Header
  */
 
+.navbar{
+  background-color: #333;
+  opacity: 0;
+}
+
 .nav-link {
   padding: .25rem 0;
   font-weight: 700;
@@ -59,6 +64,7 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-attachment: fixed;
+  justify-content: center;
 }
 
 @media only screen and (max-device-width: 1366px) {
@@ -68,12 +74,13 @@ body {
 }
 
 .cover-heading {
-  margin-top: 25%;
+  /* margin-top: 25%; */
   font-family: "Nixie One";
   font-size: 56px;
   font-style: normal;
   font-variant: normal;
   font-weight: 400;
+  text-align: center;
 }
 
 /* arrow bounce */
@@ -91,6 +98,7 @@ body {
 	-webkit-animation: bounce 3s infinite;
 	animation: bounce 3s infinite;
 }
+
 @-moz-keyframes bounce {
   0%, 20%, 50%, 80%, 100% {
     -moz-transform: translateY(0);
@@ -215,14 +223,16 @@ body {
 .container-blog {
   display: flex;
   flex-direction: row-reverse;
-  flex-wrap: wrap;
+  flex-wrap: wrap-reverse;
   margin-bottom: 5%;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .blog-item {
   background-color: inherit;
   max-width: 350px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .blog-img {
@@ -262,7 +272,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #fff;
+  background-color: #333;
   color: black;
   padding-bottom: 2%;
 }
@@ -271,16 +281,19 @@ body {
   align-content: center;
   align-items: center;
   font-size: 30px;
+  color: #fff;
 }
 
 .contactme-text2 {
   align-content: center;
   align-items: center;
   font-size: 18px;
+  color: #fff;
 }
 
 .portrait-img {
   margin-bottom: 5%;
+  border-radius: 50%;
 }
 
 .contactme-heading {
@@ -291,4 +304,5 @@ body {
   font-style: normal;
   font-variant: normal;
   font-weight: 400;
+  color: #fff;
 }
