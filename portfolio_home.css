@@ -106,11 +106,11 @@ body {
 .portfolio-title {
   margin-top: 15px;
   color: #fff;
-  font-size: 20px;
-  font-family: "Nixie One"
+  font-size: 24px;
+  /* font-family: "Nixie One" */
 }
 
-/* Portfolio section */
+/* About Me Snippet section */
 .aboutme-container {
   background-image:url(/Users/caitlincjohnson/Websites/Portfolio/version1/assets/sandiego.jpg);
   background-repeat: no-repeat;
@@ -138,4 +138,45 @@ body {
   flex-wrap:wrap;
   margin-top: 10px;
   justify-content: center;
+}
+
+/* Blog section */
+.container-blog {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  margin-bottom: 5%;
+  justify-content: space-between;
+}
+
+.blog-item {
+  background-color: inherit;
+  max-width: 300px;
+}
+
+.blog-img {
+  height: 300px;
+  width: 300px;
+  position: center;
+  background-clip: context-box;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+.blog-title {
+  margin-top: 15px;
+  color: #fff;
+  font-size: 24px;
+}
+
+.blog-date {
+  margin-top: 3px;
+  color: #fff;
+  font-size: 16px;
+}
+
+.blog-snippet s{
+  margin-top: 10px;
+  color: #fff;
+  font-size: 16px;
 }
