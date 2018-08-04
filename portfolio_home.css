@@ -69,8 +69,9 @@ body {
 .container-portfolio {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap row;
+  flex-wrap: wrap;
   margin-bottom: 5%;
+  justify-content: space-between;
 }
 
 .section-heading {
@@ -84,5 +85,22 @@ body {
 }
 
 .portfolio-item {
-  
+  background-color: inherit;
+  max-width: 300px;
+}
+
+.portfolio-img {
+  height: 300px;
+  width: 300px;
+  position: center;
+  background-clip: context-box;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+.portfolio-title {
+  margin-top: 15px;
+  color: #fff;
+  font-size: 20px;
+  font-family: "Nixie One"
 }
