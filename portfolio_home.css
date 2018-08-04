@@ -19,6 +19,10 @@ body {
   color: #fff;
 }
 
+.btn {
+  margin: 10px;
+}
+
 /*
  * Header
  */
@@ -47,13 +51,14 @@ body {
 
 /* Cover section */
 .cover-container {
-  background-image:url(/Users/caitlincjohnson/Websites/Portfolio/version1/assets/background_2.jpg);
+  background-image:url(/Users/caitlincjohnson/Websites/Portfolio/version1/assets/background.jpg);
   background-repeat: no-repeat;
-  /* background-position: center; */
+  background-position: center;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
+  filter: opacity(.4) grayscale(30%);
 }
 
 .cover-heading {
@@ -103,4 +108,34 @@ body {
   color: #fff;
   font-size: 20px;
   font-family: "Nixie One"
+}
+
+/* Portfolio section */
+.aboutme-container {
+  background-image:url(/Users/caitlincjohnson/Websites/Portfolio/version1/assets/sandiego.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  align-content: center;
+  height: 50%;
+  filter: opacity(.4) grayscale(30%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.aboutme-text {
+  align-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+
+.aboutme-buttons {
+  display: flex;
+  flex-wrap:wrap;
+  margin-top: 10px;
+  justify-content: center;
 }
