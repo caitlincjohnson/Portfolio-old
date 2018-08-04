@@ -83,7 +83,7 @@ body {
   margin-top: 5%;
   margin-bottom: 5%;
   font-family: "Nixie One";
-  font-size: 36px;
+  font-size: 45px;
   font-style: normal;
   font-variant: normal;
   font-weight: 400;
@@ -179,4 +179,41 @@ body {
   margin-top: 10px;
   color: #fff;
   font-size: 16px;
+}
+
+/* Contact Me section */
+.contactme-container {
+  align-content: center;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #fff;
+  color: black;
+}
+
+.contactme-text1 {
+  align-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+
+.contactme-text2 {
+  align-content: center;
+  align-items: center;
+  font-size: 18px;
+}
+
+.portrait-img {
+  margin-bottom: 5%;
+}
+
+.contactme-heading {
+  margin-top: 5%;
+  margin-bottom: 3%;
+  font-family: "Nixie One";
+  font-size: 45px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
 }
