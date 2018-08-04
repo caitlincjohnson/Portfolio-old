@@ -11,7 +11,7 @@ a:hover {
 
 html, body {
   height: 100%;
-  background-color: #333;
+  background-color: #fff;
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -58,7 +58,6 @@ body {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  filter: opacity(.4) grayscale(30%);
 }
 
 .cover-heading {
@@ -87,6 +86,7 @@ body {
   font-style: normal;
   font-variant: normal;
   font-weight: 400;
+  color: #000;
 }
 
 .portfolio-item {
@@ -105,14 +105,14 @@ body {
 
 .portfolio-title {
   margin-top: 15px;
-  color: #fff;
+  color: #000;
   font-size: 24px;
   /* font-family: "Nixie One" */
 }
 
 /* About Me Snippet section */
 .aboutme-container {
-  background-image:url(/Users/caitlincjohnson/Websites/Portfolio/version1/assets/sandiego.jpg);
+  background-image:url(/Users/caitlincjohnson/Websites/Portfolio/version1/assets/valledeguadalupe.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -121,7 +121,6 @@ body {
   -o-background-size: cover;
   align-content: center;
   height: 50%;
-  filter: opacity(.4) grayscale(30%);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -151,12 +150,12 @@ body {
 
 .blog-item {
   background-color: inherit;
-  max-width: 300px;
+  max-width: 350px;
 }
 
 .blog-img {
   height: 300px;
-  width: 300px;
+  width: 350px;
   position: center;
   background-clip: context-box;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -165,20 +164,23 @@ body {
 
 .blog-title {
   margin-top: 15px;
-  color: #fff;
+  color: #000;
   font-size: 24px;
+  text-align: left;
 }
 
 .blog-date {
   margin-top: 3px;
-  color: #fff;
+  color: #000;
   font-size: 16px;
+  text-align: left;
 }
 
-.blog-snippet s{
+.blog-snippet {
   margin-top: 10px;
-  color: #fff;
+  color: #000;
   font-size: 16px;
+  text-align: left !important;
 }
 
 /* Contact Me section */
@@ -190,6 +192,7 @@ body {
   justify-content: center;
   background-color: #fff;
   color: black;
+  padding-bottom: 2%;
 }
 
 .contactme-text1 {
