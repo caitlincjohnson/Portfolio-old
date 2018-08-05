@@ -244,6 +244,23 @@ body {
   transition: 0.3s;
 }
 
+.blog-item:hover .blog-img {
+  opacity: 0.5;
+}
+
+.blog-item:hover .middle {
+  opacity: 1;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: relative;
+  transform: translate(0%, -300%);
+  -ms-transform: translate(0%, -300%);
+  text-align: center;
+}
+
 .blog-title {
   margin-top: 15px;
   color: #000;
@@ -408,8 +425,11 @@ body {
   padding: 1rem;
   border-top-left-radius: 0.3rem;
   border-top-right-radius: 0.3rem;
-  background-color: #333;
-  color: #fff;
+  /* background-color: #333;
+  color: #fff; */
+  background-color: rgba(211, 206, 206, 0.5);
+  color: #000;
+
 }
 
 .modal-header .close {
@@ -420,6 +440,9 @@ body {
 .modal-title {
   margin-bottom: 0;
   line-height: 1.5;
+  font-size: 36px;
+  padding-left: 1rem;
+  font-family: "Nixie One"
 }
 
 .modal-body {
@@ -427,10 +450,10 @@ body {
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   padding: 1rem;
-  background-color: #333;
-  color: #fff;
   text-align: left;
   font-weight: lighter;
+  background-color: rgba(211, 206, 206, 0.5);
+  color: #000;
 }
 
 .modal-footer {
@@ -442,8 +465,8 @@ body {
   justify-content: flex-end;
   padding: 1rem;
   border-top: 1px solid #e9ecef;
-  background-color: #333;
-  color: #fff;
+  background-color: rgba(211, 206, 206, 0.5);
+  color: #000;
 }
 
 .modal-footer > :not(:first-child) {
