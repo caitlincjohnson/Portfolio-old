@@ -20,7 +20,6 @@
 </head>
 
 <!-- Navigation section -->
-
 <body class="text-center">
   <nav class="navbar navbar-expand-md navbar-dark fixed-top">
     <a class="navbar-brand" href="#">Caitlin C. Johnson</a>
@@ -124,24 +123,26 @@
   <div class="container">
     <p class="section-heading">Full-Stack Development Portfolio</p>
     <div class="container-portfolio">
-      <div class="portfolio-item">
-        <img class="portfolio-img" src="assets/transition.jpg" alt="Project One">
+      <div class="portfolio-item flip-container" ontouchstart="this.classList.toggle('hover');">
+        <div class="flipper">
+          <img class="front portfolio-img" src="assets/portfolio_section/personal_website.png" alt="Personal Website">
+          <div class="back container">
+            <p>Project: Personal Website</p>
+            <p>My personal website which consists of both a portfolio section and a blog section. This website acts as an online resume of sorts.</p>
+            <a href="https://github.com/caitlincjohnson/Portfolio" class="btn btn-md" style="background:#46adb1;">GitHub</a>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="portfolio-item">
+        <img class="portfolio-img" src="assets/portfolio_section/portrait3.jpg" alt="Project Two">
         <div class="container">
-          <p class="portfolio-title">Project One</p>
         </div>
       </div>
       <div class="portfolio-item">
-        <img class="portfolio-img" src="assets/border.jpg" alt="Project Two">
+        <img class="portfolio-img" src="assets/portfolio_section/sandiego.jpg" alt="Project Three">
         <div class="container">
-          <p class="portfolio-title">Project Two</p>
         </div>
-      </div>
-      <div class="portfolio-item">
-        <img class="portfolio-img" src="assets/startup_week.jpg" alt="Project Three">
-        <div class="container">
-          <p class="portfolio-title">Project Three</p>
-        </div>
-      </div>
+      </div> -->
     </div>
   </div>
 
