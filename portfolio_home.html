@@ -20,6 +20,7 @@
 </head>
 
 <!-- Navigation section -->
+
 <body class="text-center">
   <nav class="navbar navbar-expand-md navbar-dark fixed-top">
     <a class="navbar-brand" href="#">Caitlin C. Johnson</a>
@@ -32,10 +33,10 @@
           <a class="nav-link" data-toggle="modal" data-target="#aboutMeModal" href="#">About Me <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" href="#">Portfolio<span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="#portfolio-section">Portfolio<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" href="#">Blog <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="#blog-section">Blog <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item active">
           <a class="nav-link" data-toggle="modal" data-target="#contactMeModal" href="#">Contact Me <span class="sr-only">(current)</span></a>
@@ -120,7 +121,7 @@
   </div>
 
   <!-- Portfolio section -->
-  <div class="container">
+  <div class="container" id="portfolio-section">
     <p class="section-heading">Full-Stack Development Portfolio</p>
     <div class="container-portfolio">
       <div class="portfolio-item flip-container" ontouchstart="this.classList.toggle('hover');">
@@ -151,7 +152,7 @@
   </div>
 
   <!-- Blog section -->
-  <div class="container">
+  <div class="container" id="blog-section">
     <p class="section-heading">Personal Blog</p>
     <div class="container-blog">
       <div class="blog-item">
@@ -209,6 +210,7 @@
         </div>
         <div class="modal-body">
           <img class="aboutMeImg" src="assets/blog_section/post3/border.jpg" alt="San Diego Tijuana Border" style="float: left">
+          <!-- <blockquote cite="Vanishing Frontiers by Andrew">And while people far away from the border argue about how to close it off, residents of San Diego and Tijuana are plotting to build bridges across it - by sharing airports, cultural offerings, businesses and even sporting events - so that they can accomplish even more together.</blockquote> -->
           <p class="lead">As a continuation of my observations about San Diego Startup Week, I wanted to touch upon what I believe is San Diego’s most unique aspect about the city: Tijuana. Yes, I truly believe that the best thing about San Diego has nothing to do with
             the amazing weather, but rather, its proximity to Tijuana that allows it to act as the gateway to Latin America. For those unfamiliar with the layout of the area, it takes about 20-25 minutes on a good day for me to get from downtown San Diego
             to Zona Río in Tijuana (okay, maybe I go a little above the speed limit). Not only does Bloomberg value the San Diego-Tijuana connection at $230 billion [1], but according to the Binational Committee on Regional Opportunities, the main border
@@ -216,7 +218,10 @@
           <p class="lead">And San Diego has noticed within recent years according to Andrew Selee, with the following excerpt from his book, Vanishing Frontiers:</p>
           <p class="lead">In mid-2012, a poll conducted by the San Diego Foundation showed that only 9 percent of San Diego’s residents thought their city’s future was closely tied to Tijuana’s […] Three years later, a second poll conducted by the University of California,
             San Diego, found that more than 70 percent of San Diego residents saw Tijuana as a major part of their future.</p>
-          <img class="aboutMeImg" src="assets/blog_section/post3/cross_border_xpress_4.jpg" alt="Cross Border Xpress" style="float: right">
+          <figure>
+            <img class="aboutMeImg" src="assets/blog_section/post3/cross_border_xpress_4.jpg" alt="Cross Border Xpress" style="float: right">
+            <!-- <figcaption>San Diego and Tijuana leaders worked closely together to build a bridge over the wall, allowing San Diegans access to Tijuana's international airport with direct flights to Asian countries.</figcaption> -->
+          </figure>
           <p class="lead">All in all, San Diego is in a prime location with easy access to Tijuana. Yet, based on my observations and discussions at San Diego Startup Week, it appears that most of us “talk the talk” when it comes to building relationships with our southern
             neighbor, but only a few of us actually “walk the walk”. The conference did have a binational track that consisted of a handful of speakers that are actively engaged with both countries along the wall, which was the primary reason why I attended
             the conference itself given my aspirations to create a global startup; however, I was surprised at the low number of San Diegans that have ventured south of the border. I was even more surprised by the low number of San Diegans that have interacted
@@ -233,6 +238,13 @@
             gives startups all the more reason to establish their footprint across the border [4].</p>
           <p class="lead">In summary, while heavy collaboration exists between Tijuana and San Diego within well-established companies and government bodies, it appears almost non-existent within the San Diego startup ecosystem. Let’s take it upon ourselves to be more
             engaged with our southern neighbor and continue to build more bridges over the wall.</p>
+          <a style="color:#46adb1;" href="https://www.weforum.org/agenda/2015/05/tijuana-and-the-future-of-trade/">1. https://www.weforum.org/agenda/2015/05/tijuana-and-the-future-of-trade/</a>
+          <p></p>
+          <a style="color:#46adb1;" href="http://businessconexion.info/en/border-crossings-and-trade-statistics-between-san-diego-and-baja-california/">2. http://businessconexion.info/en/border-crossings-and-trade-statistics-between-san-diego-and-baja-california/</a>
+          <p></p>
+          <a style="color:#46adb1;" href="https://usmex.ucsd.edu/_files/frontera-friday/tijuana-regional-profile-2017.pdf">3. https://usmex.ucsd.edu/_files/frontera-friday/tijuana-regional-profile-2017.pdf</a>
+          <p></p>
+          <a style="color:#46adb1;" href="https://www.pwc.com/gx/en/issues/economy/the-world-in-2050.html">4. https://www.pwc.com/gx/en/issues/economy/the-world-in-2050.html</a>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-sm" data-dismiss="modal" style="background:#46adb1;">Close</button>
@@ -256,14 +268,23 @@
         </div>
         <div class="modal-body">
           <img class="aboutMeImg" src="assets/blog_section/post2/startup_week.jpg" alt="San Diego Startup Week Badge" style="float: left">
-          <p class="lead">During my first week of “funemployment”, I decided to get a head start on developing my network by attending a handful of sessions at San Diego Startup Week that took place at the end of June. While there were many valuable takeaways from all of the sessions that I attended – which I will most likely reference in future posts – the one that really hit home was Rob Ryan’s “How to Build a Global Startup” session on June 26. I was attracted to this session since I have aspirations to create my own global startup focused on healthcare, so I figured that at the minimum, I should at least listen and learn from others that have endeavored on the same path.</p>
+          <p class="lead">During my first week of “funemployment”, I decided to get a head start on developing my network by attending a handful of sessions at San Diego Startup Week that took place at the end of June. While there were many valuable takeaways from all
+            of the sessions that I attended – which I will most likely reference in future posts – the one that really hit home was Rob Ryan’s “How to Build a Global Startup” session on June 26. I was attracted to this session since I have aspirations
+            to create my own global startup focused on healthcare, so I figured that at the minimum, I should at least listen and learn from others that have endeavored on the same path.</p>
           <p class="lead">But I walked away with much more than that.</p>
-          <p class="lead">Rob Ryan somehow broke down what appears to most of us a very complex, overwhelming scenario of establishing a global startup into steps that are much more manageable and easy to visualize. He didn’t necessarily give us a To Do list for creating a global startup, but rather, he shared with us his experiences of creating one of his own and sharing with us lessons learned on how he accomplished creating his global startup company, GrowthHax. I won’t reiterate all of the key takeaways from his session, but in short, it’s as simple as putting yourself out there to network and actually work with like-minded, passionate individuals in other countries. And forming a global startup can be done by anyone, whether you’re a 24-year-old Harvard graduate aspiring to share their knowledge with the world or a 65-year-old blue collar retiree that wants to take a shot at changing the world.</p>
-          <p class="lead">While I learned a lot of valuable lessons during Rob Ryan’s speech, it also inspired me to start bigger. And bolder. And globally. Well, at least within Latin America. My initial plan was to launch the product – whether it’s an app or a service – in one country outside of the United States, but then I thought to myself…why start with just one country? Why not more? All I need to do is start putting myself out there and talk with people that are just as passionate as I am about solving problems.</p>
+          <p class="lead">Rob Ryan somehow broke down what appears to most of us a very complex, overwhelming scenario of establishing a global startup into steps that are much more manageable and easy to visualize. He didn’t necessarily give us a To Do list for creating
+            a global startup, but rather, he shared with us his experiences of creating one of his own and sharing with us lessons learned on how he accomplished creating his global startup company, GrowthHax. I won’t reiterate all of the key takeaways
+            from his session, but in short, it’s as simple as putting yourself out there to network and actually work with like-minded, passionate individuals in other countries. And forming a global startup can be done by anyone, whether you’re a 24-year-old
+            Harvard graduate aspiring to share their knowledge with the world or a 65-year-old blue collar retiree that wants to take a shot at changing the world.</p>
+          <p class="lead">While I learned a lot of valuable lessons during Rob Ryan’s speech, it also inspired me to start bigger. And bolder. And globally. Well, at least within Latin America. My initial plan was to launch the product – whether it’s an app or a service
+            – in one country outside of the United States, but then I thought to myself…why start with just one country? Why not more? All I need to do is start putting myself out there and talk with people that are just as passionate as I am about solving
+            problems.
+          </p>
           <p class="lead">I’m ready to start changing the world, one conversation at a time.</p>
           <p class="lead">If you want to be inspired by Rob Ryan, I highly recommend checking him out on the following social media channels:</p>
-          <p class="lead">Twitter: @IamRobRyan</p>
-          <p class="lead">Instagram: @IamRobRyan</p>
+          <span class="lead">Twitter:<a class="lead" style="color:#46adb1;" href="https://twitter.com/IAmRobRyan">@IAmRobRyan</a></span>
+          <p></p>
+          <span class="lead">Instagram:<a class="lead" style="color:#46adb1;" href="https://www.instagram.com/iamrobryan/?hl=en">@IAmRobRyan</a></span>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-sm" data-dismiss="modal" style="background:#46adb1;">Close</button>
@@ -289,10 +310,15 @@
           <img class="aboutMeImg" src="assets/blog_section/post1/transition.jpg" alt="Transition" style="float: left">
           <p class="lead">If someone told me five years ago that I would be starting my own blog, I would have probably laughed and shrugged it off as a joke. Not that I’m opposed to blogging or similar communications of sorts, but I’m a person of few words.</p>
           <p class="lead">Very few words.</p>
-          <p class="lead">My friends and family can attest to this. This is why I’m drawn to social media apps that focus more on pictures (Instagram) or involve few words (Twitter). But blogs? I wouldn’t even know how to become a successful blogger with so few words, but maybe I can create my own style of blogging by communicating my experiences with more pictures and less words.</p>
-          <p class="lead">So here I am, writing my first blog. And why am I here? Good question. For full transparency, I’m here because I’m making a career change to full-stack development, and I want to leverage my experiences during the transition and onward into learning lessons and provide insight into how I believe newly-learned concepts can be applied to healthcare.</p>
-          <p class="lead">And why am I just now learning about full-stack development? That’s another good question. I recently left my job as a senior consultant for a well-known healthcare management firm to take a full-stack developer boot camp at LEARN Academy here in San Diego, and I plan to use this skillset to amplify my impact within healthcare and to pursue my passion of developing innovative solutions to bridge communications between patients and providers within rural communities around the globe. Going from consulting to programming may seem like a huge jump, but in reality I’ve been programming here and there over the past ten years, so the concepts aren’t foreign to me.</p>
-          <p class="lead">Which leads to why I’m here. I’m hoping to use this medium to showcase my portfolio for full-stack development and to interact with other innovators, developers, and individuals that are also passionate about changing the world. But I also hope to use this to share my experiences along the way.</p>
+          <p class="lead">My friends and family can attest to this. This is why I’m drawn to social media apps that focus more on pictures (Instagram) or involve few words (Twitter). But blogs? I wouldn’t even know how to become a successful blogger with so few words,
+            but maybe I can create my own style of blogging by communicating my experiences with more pictures and less words.</p>
+          <p class="lead">So here I am, writing my first blog. And why am I here? Good question. For full transparency, I’m here because I’m making a career change to full-stack development, and I want to leverage my experiences during the transition and onward into
+            learning lessons and provide insight into how I believe newly-learned concepts can be applied to healthcare.</p>
+          <p class="lead">And why am I just now learning about full-stack development? That’s another good question. I recently left my job as a senior consultant for a well-known healthcare management firm to take a full-stack developer boot camp at LEARN Academy here
+            in San Diego, and I plan to use this skillset to amplify my impact within healthcare and to pursue my passion of developing innovative solutions to bridge communications between patients and providers within rural communities around the globe.
+            Going from consulting to programming may seem like a huge jump, but in reality I’ve been programming here and there over the past ten years, so the concepts aren’t foreign to me.</p>
+          <p class="lead">Which leads to why I’m here. I’m hoping to use this medium to showcase my portfolio for full-stack development and to interact with other innovators, developers, and individuals that are also passionate about changing the world. But I also hope
+            to use this to share my experiences along the way.</p>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-sm" data-dismiss="modal" style="background:#46adb1;">Close</button>
@@ -308,7 +334,7 @@
       <img class="portrait-img" src="assets/portrait.jpg" alt="Caitlin C Johnson">
       <p class="contactme-text1">Caitlin C. Johnson</p>
       <p class="contactme-text2">San Diego, California, USA</p>
-      <a class="contactme-text2" style="color:#46adb1;" href="mailto:caitlin.ch.johnson@gmail.com">caitlin.ch.johnson@gmail.com</p>
+      <a class="contactme-text2" style="color:#46adb1;" href="mailto:caitlin.ch.johnson@gmail.com">caitlin.ch.johnson@gmail.com</a>
     </div>
   </div>
 
