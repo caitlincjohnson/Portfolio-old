@@ -62,18 +62,31 @@
               <input type="email" class="form-control" id="recipient-name" placeholder="caitlin.ch.johnson@gmail.com" readonly>
             </div>
             <div class="form-group">
-              <label for="recipient-name" class="col-form-label">Email Address:</label>
-              <input type="email" class="form-control" id="recipient-name" placeholder="Enter email" required>
+              <label for="sender-name" class="col-form-label">Name:</label>
+              <input type="text" class="form-control" id="sender-name" name="sender-name" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+              <label for="sender-email" class="col-form-label">Email Address:</label>
+              <input type="email" class="form-control" id="sender-email" name="sender-email" placeholder="Enter your email address" required>
             </div>
             <div class="form-group">
               <label for="message-text" class="col-form-label">Message:</label>
-              <textarea class="form-control" id="message-text"></textarea>
+              <textarea class="form-control" type=textarea name="message-text" id="message-text"></textarea>
             </div>
           </form>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="submit" class="btn btn-primary" href="mailto:caitlin.ch.johnson@gmail.com">Send message</button>
+          <button type="submit" class="btn btn-primary" href="mailto:caitlin.ch.johnson@gmail.com" style="background:#46adb1;">Send message</button>
+        </div>
+        <!-- TODO: Make sure this actually works -->
+        <!-- display a success message if the form gets submitted -->
+        <div id="success_message" style="width:100%; height:100%; display:none; ">
+          <h3>Sent your message successfully!</h3>
+        </div>
+        <!-- display an error message if it doesn't -->
+        <div id="error_message" style="width:100%; height:100%; display:none; ">
+          <h3>Error</h3> Sorry there was an error sending your form.
         </div>
       </div>
     </div>
@@ -127,7 +140,7 @@
   <!-- Portfolio section -->
   <div class="container" id="portfolio-section">
     <p class="section-heading">Full-Stack Development Portfolio</p>
-    <div class="container-portfolio">
+    <div class="container-portfolio" id="scroll">
       <div class="portfolio-item flip-container" ontouchstart="this.classList.toggle('hover');">
         <div class="flipper">
           <img class="portfolio-img front" src="assets/portfolio_section/personal_website.png" alt="Personal Website">
@@ -232,10 +245,10 @@
             with Tijuanese (local slang for residents of Tijuana) for their startups. And I was especially surprised by the lack of acknowledgement of Tijuana’s existence by San Diegan conference speakers during their session about San Diego’s ecosystem
             (until someone in the audience called them out for it).
           </p>
-          <p class="lead">Before this turns into a diatribe, I want to explain why San Diegan startups need to pay more attention to Tijuana. The city itself is full of global companies that provide an abundance of resources to the startup community, such as Tijuana
-            Innovadora, a biennial mega-conference hosted by well-established companies that promotes innovation in Tijuana and provides startups an opportunity to market themselves. Additionally, companies in Tijuana are supported by at least 8,000 professional,
+          <span><p class="lead">Before this turns into a diatribe, I want to explain why San Diegan startups need to pay more attention to Tijuana. The city itself is full of global companies that provide an abundance of resources to the startup community, such as <a style="color:#46adb1;" href="http://www.sandiegouniontribune.com/news/border-baja-california/sd-me-tijuana-innovadora-20161025-story.html">Tijuana
+            Innovadora</a>, a biennial mega-conference hosted by well-established companies that promotes innovation in Tijuana and provides startups an opportunity to market themselves. Additionally, companies in Tijuana are supported by at least 8,000 professional,
             scientific and technical service providers, and startups have access to numerous incubators, accelerators and coworking spaces [3]. Sure, it’s cheaper there, which I can appreciate as a huge benefit for startups, but I caution in letting that
-            overshadow the numerous additional benefits that Tijuana can provide to San Diegan startups.</p>
+            overshadow the numerous additional benefits that Tijuana can provide to San Diegan startups.</p></span>
           <img class="aboutMeImg" src="assets/blog_section/post3/world-in-2050-image1.png" alt="Emerging markets in 2050" style="float: left">
           <p class="lead">And most importantly, if a startup is a business that is designed to scale and grow rapidly, then why stop at the border? Why not leverage the market in Tijuana to expand into Mexico and eventually the rest of Latin America? The consumer markets
             in United States and Mexico are more intertwined than believed, and American companies are continuously finding success selling their products within the Mexican market. And Mexico is predicted to be a top 10 global economy by 2050, which
@@ -276,10 +289,10 @@
             of the sessions that I attended – which I will most likely reference in future posts – the one that really hit home was Rob Ryan’s “How to Build a Global Startup” session on June 26. I was attracted to this session since I have aspirations
             to create my own global startup focused on healthcare, so I figured that at the minimum, I should at least listen and learn from others that have endeavored on the same path.</p>
           <p class="lead">But I walked away with much more than that.</p>
-          <p class="lead">Rob Ryan somehow broke down what appears to most of us a very complex, overwhelming scenario of establishing a global startup into steps that are much more manageable and easy to visualize. He didn’t necessarily give us a To Do list for creating
-            a global startup, but rather, he shared with us his experiences of creating one of his own and sharing with us lessons learned on how he accomplished creating his global startup company, GrowthHax. I won’t reiterate all of the key takeaways
+          <span><p class="lead">Rob Ryan somehow broke down what appears to most of us a very complex, overwhelming scenario of establishing a global startup into steps that are much more manageable and easy to visualize. He didn’t necessarily give us a To Do list for creating
+            a global startup, but rather, he shared with us his experiences of creating one of his own and sharing with us lessons learned on how he accomplished creating his global startup company, <a style="color:#46adb1;" href="https://www.growthhax.com/">GrowthHax</a>. I won’t reiterate all of the key takeaways
             from his session, but in short, it’s as simple as putting yourself out there to network and actually work with like-minded, passionate individuals in other countries. And forming a global startup can be done by anyone, whether you’re a 24-year-old
-            Harvard graduate aspiring to share their knowledge with the world or a 65-year-old blue collar retiree that wants to take a shot at changing the world.</p>
+            Harvard graduate aspiring to share their knowledge with the world or a 65-year-old blue collar retiree that wants to take a shot at changing the world.</p></span>
           <p class="lead">While I learned a lot of valuable lessons during Rob Ryan’s speech, it also inspired me to start bigger. And bolder. And globally. Well, at least within Latin America. My initial plan was to launch the product – whether it’s an app or a service
             – in one country outside of the United States, but then I thought to myself…why start with just one country? Why not more? All I need to do is start putting myself out there and talk with people that are just as passionate as I am about solving
             problems.
