@@ -267,11 +267,13 @@ body {
   .aboutme-container {
     font-size: 18px;
   }
+  .aboutme-buttons {
+    flex-direction: column;
+  }
 }
 
 .aboutme-buttons {
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
   margin-top: 10px;
   justify-content: center;
