@@ -70,7 +70,7 @@ body {
 @media only screen and (max-device-width: 1366px) {
     .cover-container, .aboutme-container {
         background-attachment: scroll;
-        background-size: contain;
+        object-fit: cover;
     }
 }
 
