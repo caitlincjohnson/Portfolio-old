@@ -70,6 +70,7 @@ body {
 @media only screen and (max-device-width: 1366px) {
     .cover-container, .aboutme-container {
         background-attachment: scroll;
+        background-size: contain;
     }
 }
 
@@ -246,6 +247,12 @@ body {
   background-attachment: fixed;
 }
 
+@media only screen and (max-device-width: 1366px) {
+    .aboutme-container {
+      font-size: 20px;
+    }
+}
+
 .aboutme-text {
   align-content: center;
   align-items: center;
@@ -254,6 +261,7 @@ body {
 
 .aboutme-buttons {
   display: flex;
+  flex-direction: row;
   flex-wrap:wrap;
   margin-top: 10px;
   justify-content: center;
