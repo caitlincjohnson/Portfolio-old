@@ -66,6 +66,7 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   justify-content: center;
+  object-fit: scale-down;
 }
 
 @media only screen and (min-width: 768px) {
