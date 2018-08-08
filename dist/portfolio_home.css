@@ -65,6 +65,7 @@ body {
 }
 
 /* tablets and split screen */
+
 /* @media only screen and (max-device-width: 1366px) {
   .cover-container, .aboutme-container {
     background-attachment: scroll;
@@ -73,27 +74,20 @@ body {
 } */
 
 /* mobile device */
+
 .cover-container, .aboutme-container {
   background-attachment: scroll;
   object-fit: cover;
 }
 
-@media only screen and (min-width: 768px) {
-  .cover-heading {
-    font-family: "Nixie One";
-    font-size: 56px;
-    font-style: normal;
-    font-variant: normal;
-    font-weight: 400;
-    text-align: center;
-  }
+.cover-heading {
+  font-family: "Nixie One";
+  font-size: 56px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  text-align: center;
 }
-
-/* mobile device */
-  .cover-heading {
-    font-size: 36px;
-  }
-
 
 /* arrow bounce */
 
@@ -199,60 +193,49 @@ body {
   transition: 0.3s;
 }
 
-/* entire container, keeps perspective */
-
-.flip-container {
-  perspective: 1000px;
-}
-
-/* flip the pane when hovered */
-
-.flip-container:hover .flipper, .flip-container.hover .flipper {
-  transform: rotateY(180deg);
-}
-
-.flip-container, .front, .back {
-  width: 300px;
-  height: 300px;
-}
-
-/* flip speed goes here */
-
-.flipper {
-  transition: 0.6s;
-  transform-style: preserve-3d;
-  position: relative;
-}
-
-/* hide back of pane during swap */
-
-.front, .back {
-  backface-visibility: hidden;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-/* front pane, placed above back */
-
-.front {
-  z-index: 2;
-  /* for firefox 31 */
-  transform: rotateY(0deg);
-}
-
-/* back, initially hidden pane */
-
-.back {
-  transform: rotateY(180deg);
-  background-color: #333;
-  color: inherit;
-  padding-top: 15%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+@media only screen and (min-width: 768px) {
+  /* entire container, keeps perspective */
+  .flip-container {
+    perspective: 1000px;
+  }
+  /* flip the pane when hovered */
+  .flip-container:hover .flipper, .flip-container.hover .flipper {
+    transform: rotateY(180deg);
+  }
+  .flip-container, .front, .back {
+    width: 300px;
+    height: 300px;
+  }
+  /* flip speed goes here */
+  .flipper {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+  }
+  /* hide back of pane during swap */
+  .front, .back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  /* front pane, placed above back */
+  .front {
+    z-index: 2;
+    /* for firefox 31 */
+    transform: rotateY(0deg);
+  }
+  /* back, initially hidden pane */
+  .back {
+    transform: rotateY(180deg);
+    background-color: #333;
+    color: inherit;
+    padding-top: 15%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
 }
 
 /* About Me Snippet section */
-
 .aboutme-container {
   background-image: url(assets/homepage/portrait3.jpg);
   background-repeat: no-repeat;
