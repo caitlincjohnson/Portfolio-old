@@ -4,7 +4,9 @@ a, a:focus, a:hover {
   color: #fff;
 }
 
-/* Base structure */
+/*
+Base structure
+*/
 
 html, body {
   height: 100%;
@@ -21,13 +23,16 @@ body {
 }
 
 /* mobile devices */
+
 @media only screen and (max-width: 768px) {
   .lead {
-    font-size: 12;
+    font-size: 10;
   }
 }
 
-/* Navigation Bar */
+/*
+Navigation Bar
+*/
 
 .navbar {
   background-color: #333;
@@ -55,8 +60,11 @@ body {
   border-bottom-color: #fff;
 }
 
-/* Cover section */
-.cover-container, .aboutme-container {
+/*
+Cover section
+*/
+
+.cover-container {
   background-attachment: scroll;
   object-fit: cover;
   background-image: url(assets/homepage/background.jpg);
@@ -71,6 +79,7 @@ body {
 }
 
 /* large screens */
+
 @media only screen and (min-width: 768px) {
   .cover-container {
     background-attachment: fixed;
@@ -87,6 +96,7 @@ body {
 }
 
 /* large screens */
+
 @media only screen and (min-width: 768px) {
   .cover-heading {
     font-size: 56px;
@@ -161,25 +171,41 @@ body {
   }
 }
 
-/* Portfolio section */
+/*
+Portfolio section
+*/
 
 .container-portfolio {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   margin-bottom: 5%;
-  justify-content: space-between;
+  justify-content: center;
+}
+
+/* large screens */
+@media only screen and (min-width: 768px) {
+  .container-portfolio {
+    justify-content: space-between;
+  }
 }
 
 .section-heading {
   margin-top: 5%;
   margin-bottom: 5%;
   font-family: "Nixie One";
-  font-size: 45px;
+  font-size: 25px;
   font-style: normal;
   font-variant: normal;
   font-weight: 400;
   color: #000;
+}
+
+/* large screens */
+@media only screen and (min-width: 768px) {
+  .section-heading {
+    font-size: 45px;
+  }
 }
 
 .portfolio-item {
@@ -195,6 +221,13 @@ body {
   background-clip: context-box;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
+}
+
+.back {
+  background-color: #333;
+  color: inherit;
+  padding-top: 15%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 /* large screens */
@@ -240,7 +273,10 @@ body {
   }
 }
 
-/* About Me Snippet section */
+/*
+About Me Snippet
+*/
+
 .aboutme-container {
   background-image: url(assets/homepage/portrait3.jpg);
   background-repeat: no-repeat;
@@ -256,11 +292,12 @@ body {
   justify-content: center;
   background-attachment: scroll;
   object-fit: scale-down;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 30%;
+  padding-bottom: 30%;
 }
 
 /* large screens */
+
 @media only screen and (min-width: 768px) {
   .aboutme-container {
     background-attachment: fixed;
@@ -276,6 +313,7 @@ body {
 }
 
 /* large screens */
+
 @media only screen and (min-width: 768px) {
   .aboutme-text {
     font-size: 24px;
@@ -291,13 +329,18 @@ body {
 }
 
 /* large screens */
+
 @media only screen and (min-width: 768px) {
   .aboutme-buttons {
     flex-direction: row;
   }
 }
 
-/* Blog section */
+/*
+Blog section
+*/
+
+/* blog card item */
 .container-blog {
   display: flex;
   flex-direction: row-reverse;
@@ -323,6 +366,58 @@ body {
   transition: 0.3s;
 }
 
+.blog-title {
+  color: #000;
+  font-size: 24px;
+  text-align: left;
+}
+
+.blog-date {
+  margin-top: 3px;
+  color: #000;
+  font-size: 16px;
+  text-align: left;
+}
+
+.blog-snippet {
+  margin-top: 10px;
+  color: #000;
+  font-size: 16px;
+  text-align: left !important;
+  margin-bottom: 30px;
+}
+
+/* large screens */
+
+@media only screen and (min-width: 768px) {
+  .blog-img {
+    height: 300px;
+    width: 350px;
+    object-fit: cover;
+    position: center;
+    background-clip: context-box;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+  }
+  .blog-item:hover .blog-img {
+    opacity: 0.3;
+    filter: grayscale(100%);
+  }
+  .blog-item:hover .middle {
+    opacity: 1;
+  }
+  .middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: relative;
+    transform: translate(0%, -300%);
+    -ms-transform: translate(0%, -300%);
+    text-align: center;
+  }
+}
+
+/* Blog modal content */
+
 /* .blockquote {
   background: #f9f9f9;
   border-left: 10px solid #ccc;
@@ -344,49 +439,13 @@ body {
   display: block;
 } */
 
-.figcaption {
+/* .figcaption {
   display: block;
-}
+} */
 
-.blog-item:hover .blog-img {
-  opacity: 0.3;
-  filter: grayscale(100%);
-}
-
-.blog-item:hover .middle {
-  opacity: 1;
-}
-
-.middle {
-  transition: .5s ease;
-  opacity: 0;
-  position: relative;
-  transform: translate(0%, -300%);
-  -ms-transform: translate(0%, -300%);
-  text-align: center;
-}
-
-.blog-title {
-  color: #000;
-  font-size: 24px;
-  text-align: left;
-}
-
-.blog-date {
-  margin-top: 3px;
-  color: #000;
-  font-size: 16px;
-  text-align: left;
-}
-
-.blog-snippet {
-  margin-top: 10px;
-  color: #000;
-  font-size: 16px;
-  text-align: left !important;
-}
-
-/* Contact Me section */
+/*
+Contact Me section
+*/
 
 .contactme-container {
   align-content: center;
@@ -429,7 +488,9 @@ body {
   color: #fff;
 }
 
-/* modal */
+/*
+Modals
+*/
 
 .modal {
   position: fixed;
