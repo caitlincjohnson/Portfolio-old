@@ -20,6 +20,12 @@ body {
   margin: 10px;
 }
 
+@media only screen and (max-width: 768px) {
+  .lead {
+    font-size: 12;
+  }
+}
+
 /* Navigation Bar */
 
 .navbar {
@@ -49,7 +55,6 @@ body {
 }
 
 /* Cover section */
-
 .cover-container, .aboutme-container {
   background-attachment: scroll;
   object-fit: cover;
@@ -63,20 +68,25 @@ body {
   justify-content: center;
 }
 
-
 @media only screen and (min-width: 768px) {
-  .cover-container {
+  .cover-container, .aboutme-container {
     background-attachment: fixed;
   }
 }
 
 .cover-heading {
   font-family: "Nixie One";
-  font-size: 56px;
+  font-size: 36px;
   font-style: normal;
   font-variant: normal;
   font-weight: 400;
   text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .cover-heading {
+    font-size: 56px;
+  }
 }
 
 /* arrow bounce */
@@ -240,6 +250,13 @@ body {
   flex-direction: column;
   justify-content: center;
   background-attachment: fixed;
+  object-fit: scale-down;
+}
+
+@media only screen and (min-width: 768px) {
+  .aboutme-container {
+    background-attachment: scroll;
+  }
 }
 
 .aboutme-text {
