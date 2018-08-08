@@ -4,9 +4,7 @@ a, a:focus, a:hover {
   color: #fff;
 }
 
-/*
- * Base structure
- */
+/* Base structure */
 
 html, body {
   height: 100%;
@@ -22,9 +20,7 @@ body {
   margin: 10px;
 }
 
-/*
- * Header
- */
+/* Navigation Bar */
 
 .navbar {
   background-color: #333;
@@ -54,34 +50,50 @@ body {
 
 /* Cover section */
 
-.cover-container {
-  background-image: url(assets/homepage/background.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-attachment: fixed;
-  justify-content: center;
+@media only screen and (min-width: 768px) {
+  .cover-container {
+    background-image: url(assets/homepage/background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-attachment: fixed;
+    justify-content: center;
+  }
 }
 
-@media only screen and (max-device-width: 1366px) {
+/* tablets and split screen */
+/* @media only screen and (max-device-width: 1366px) {
   .cover-container, .aboutme-container {
     background-attachment: scroll;
     object-fit: cover;
   }
+} */
+
+/* mobile device */
+.cover-container, .aboutme-container {
+  background-attachment: scroll;
+  object-fit: cover;
 }
 
-.cover-heading {
-  /* margin-top: 25%; */
-  font-family: "Nixie One";
-  font-size: 56px;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: 400;
-  text-align: center;
+@media only screen and (min-width: 768px) {
+  .cover-heading {
+    font-family: "Nixie One";
+    font-size: 56px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    text-align: center;
+  }
 }
+
+/* mobile device */
+  .cover-heading {
+    font-size: 36px;
+  }
+
 
 /* arrow bounce */
 
