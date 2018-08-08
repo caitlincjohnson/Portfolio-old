@@ -69,7 +69,7 @@ body {
 }
 
 @media only screen and (min-width: 768px) {
-  .cover-container, .aboutme-container {
+  .cover-container {
     background-attachment: fixed;
   }
 }
@@ -249,13 +249,13 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-attachment: fixed;
+  background-attachment: scroll;
   object-fit: scale-down;
 }
 
 @media only screen and (min-width: 768px) {
   .aboutme-container {
-    background-attachment: scroll;
+    background-attachment: fixed;
   }
 }
 
