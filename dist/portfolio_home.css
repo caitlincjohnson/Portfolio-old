@@ -256,12 +256,16 @@ body {
   justify-content: center;
   background-attachment: scroll;
   object-fit: scale-down;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 /* large screens */
 @media only screen and (min-width: 768px) {
   .aboutme-container {
     background-attachment: fixed;
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
 }
 
