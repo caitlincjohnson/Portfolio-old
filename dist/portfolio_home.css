@@ -50,34 +50,24 @@ body {
 
 /* Cover section */
 
-@media only screen and (min-width: 768px) {
-  .cover-container {
-    background-image: url(assets/homepage/background.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-attachment: fixed;
-    justify-content: center;
-  }
-}
-
-/* tablets and split screen */
-
-/* @media only screen and (max-device-width: 1366px) {
-  .cover-container, .aboutme-container {
-    background-attachment: scroll;
-    object-fit: cover;
-  }
-} */
-
-/* mobile device */
-
 .cover-container, .aboutme-container {
   background-attachment: scroll;
   object-fit: cover;
+  background-image: url(assets/homepage/background.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  justify-content: center;
+}
+
+
+@media only screen and (min-width: 768px) {
+  .cover-container {
+    background-attachment: fixed;
+  }
 }
 
 .cover-heading {
