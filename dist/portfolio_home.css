@@ -297,7 +297,6 @@ About Me Snippet
 }
 
 /* large screens */
-
 @media only screen and (min-width: 768px) {
   .aboutme-container {
     background-attachment: fixed;
@@ -313,7 +312,6 @@ About Me Snippet
 }
 
 /* large screens */
-
 @media only screen and (min-width: 768px) {
   .aboutme-text {
     font-size: 24px;
@@ -329,7 +327,6 @@ About Me Snippet
 }
 
 /* large screens */
-
 @media only screen and (min-width: 768px) {
   .aboutme-buttons {
     flex-direction: row;
@@ -467,17 +464,28 @@ Contact Me section
   padding-bottom: 2%;
 }
 
+.contactme-heading {
+  margin-top: 5%;
+  margin-bottom: 3%;
+  font-family: "Nixie One";
+  font-size: 25px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  color: #fff;
+}
+
 .contactme-text1 {
   align-content: center;
   align-items: center;
-  font-size: 30px;
+  font-size: 15px;
   color: #fff;
 }
 
 .contactme-text2 {
   align-content: center;
   align-items: center;
-  font-size: 18px;
+  font-size: 12px;
   color: #fff;
 }
 
@@ -486,15 +494,17 @@ Contact Me section
   border-radius: 50%;
 }
 
-.contactme-heading {
-  margin-top: 5%;
-  margin-bottom: 3%;
-  font-family: "Nixie One";
-  font-size: 45px;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: 400;
-  color: #fff;
+/* large screens */
+@media only screen and (min-width: 768px) {
+  .contactme-heading {
+    font-size: 45px;
+  }
+  .contactme-text1 {
+    font-size: 30px;
+  }
+  .contactme-text2 {
+    font-size: 18px;
+  }
 }
 
 /*
