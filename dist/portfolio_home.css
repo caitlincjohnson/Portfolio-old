@@ -286,6 +286,13 @@ body {
   flex-direction: column;
 }
 
+/* large screens */
+@media only screen and (min-width: 768px) {
+  .aboutme-buttons {
+    flex-direction: row;
+  }
+}
+
 /* Blog section */
 .container-blog {
   display: flex;
