@@ -56,6 +56,13 @@ Navigation Bar
 .active {
   color: #fff;
   border-bottom-color: #fff;
+  font-size: 14px;
+}
+
+@media only screen and (min-width: 768px) {
+  .active {
+    font-size: 16px;
+  }
 }
 
 /*
