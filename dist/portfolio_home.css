@@ -18,16 +18,15 @@ body {
   color: #fff;
 }
 
-.btn {
-  margin: 10px;
+@media only screen and (min-width: 768px) {
+  body {
+  font-size: 20px;
+}
 }
 
-/* mobile devices */
 
-@media only screen and (max-width: 768px) {
-  .lead {
-    font-size: 10;
-  }
+.btn {
+  margin: 10px;
 }
 
 /*
@@ -385,7 +384,6 @@ Blog section
 }
 
 /* large screens */
-
 @media only screen and (min-width: 768px) {
   .blog-img {
     height: 300px;
@@ -525,10 +523,17 @@ Modals
 
 .modal-dialog {
   position: relative;
+  margin: 1rem;
+  pointer-events: none;
+}
+
+@media only screen and (max-width: 768px) {
+.modal-dialog {
+  position: relative;
   width: 100%;
-  ;
   margin: 0.5rem;
   pointer-events: none;
+}
 }
 
 .modal.fade .modal-dialog {
@@ -540,7 +545,7 @@ Modals
 }
 
 .standardModal {
-  background-color: rgba(51, 51, 51, 0.5) !important;
+  background-color: rgba(51, 51, 51, 0.5);
   color: #000;
 }
 
