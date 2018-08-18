@@ -110,7 +110,7 @@ Cover section
 
 /* arrow bounce */
 
-.downArrow {
+.arrow-down {
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -120,7 +120,7 @@ Cover section
 }
 
 .bounce {
-  -moz-animation: bounce 3s infinite;
+  -moz-animation: bounmodal-imgfinite;
   -webkit-animation: bounce 3s infinite;
   animation: bounce 3s infinite;
 }
@@ -690,14 +690,14 @@ Modals
   overflow: scroll;
 }
 
-.modalImg {
+.modal-img {
   height: auto;
   width: 100%;
   margin-bottom: 5%;
 }
 
 @media only screen and (min-width: 768px) {
-  .modalImg {
+  .modal-img {
     height: 450px;
     width: auto;
     margin: 15px;
@@ -715,7 +715,7 @@ Modals
   .modal-dialog-centered::before {
     height: calc(100vh - (1.75rem * 2));
   }
-  .modalImg {
+  .modal-img {
     height: auto;
     width: 50%;
     margin: 15px;
