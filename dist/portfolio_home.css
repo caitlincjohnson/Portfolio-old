@@ -41,8 +41,7 @@ section {
 }
 
 section-heading {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin: 2rem 0 2rem;
   width: 100vw;
   font-family: "Nixie One";
   font-size: 2rem;
@@ -65,7 +64,6 @@ Button
 */
 
 .btn {
-  margin: 1rem;
   background: #46adb1;
   color: #fff !important;
 }
@@ -196,10 +194,26 @@ arrow-down {
 Portfolio section
 */
 
+section-portfolio {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap-reverse;
+  justify-content: center;
+}
+
 portfolio-item {
   background-color: inherit;
   max-width: 300px;
   margin: 1rem;
+}
+
+portfolio-title {
+  font-size: 1.2rem;
+  font-family: "Nixie One"
+}
+
+.portfolio-text {
+  font-size: .8rem;
 }
 
 .portfolio-img {
@@ -214,7 +228,7 @@ portfolio-item {
 .back {
   background-color: #333;
   color: inherit;
-  padding-top: 15%;
+  padding-top: 5%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -222,6 +236,8 @@ portfolio-item {
 
 @media only screen and (min-width: 768px) {
   /* entire container, keeps perspective */
+
+
   .flip-container {
     perspective: 1000px;
   }
@@ -257,9 +273,9 @@ portfolio-item {
     transform: rotateY(180deg);
     background-color: #333;
     color: inherit;
-    padding-top: 15%;
+    padding-top: 5%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    font-size: 0.8rem;
+    font-size: 0.6rem;
   }
 }
 
@@ -294,22 +310,20 @@ aboutme-buttons {
   width: 100vw;
 }
 
+aboutme-buttons > .btn {
+  margin: 1rem;
+}
+
 /* large screens */
 
 @media only screen and (min-width: 768px) {
   aboutme-section {
     background-attachment: fixed;
-    padding-top: 0;
-    padding-bottom: 0;
+    padding: 0 2rem 0;
   }
   aboutme-buttons {
     flex-direction: row;
   }
-}
-
-.portfolio-title {
-  font-size: 24px;
-  font-family: "Nixie One"
 }
 
 /*
@@ -322,15 +336,13 @@ section-blog {
   display: flex;
   flex-direction: row-reverse;
   flex-wrap: wrap-reverse;
-  margin-bottom: 5%;
   justify-content: center;
 }
 
 blog-item {
   background-color: inherit;
   max-width: 350px;
-  margin-left: .5rem;
-  margin-right: .5rem;
+  margin: 0 .5rem;
   display: flex;
   flex-direction: column;
   color: #000;
@@ -396,8 +408,8 @@ blog-snippet {
     transition: .5s ease;
     opacity: 0;
     position: relative;
-    transform: translate(0, -250%);
-    -ms-transform: translate(0, -250%);
+    transform: translate(0, -425%);
+    -ms-transform: translate(0, -425%);
     text-align: center;
   }
 }
