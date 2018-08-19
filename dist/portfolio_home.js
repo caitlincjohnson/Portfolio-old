@@ -3,7 +3,7 @@
 // Fades away as you scroll down
 
 $(window).scroll(function() {
-  $(".arrow-down").css("opacity", 1 - $(window).scrollTop() / 250);
+  $("arrow-down").css("opacity", 1 - $(window).scrollTop() / 250);
   //250 is fade pixels
   $(".navbar").css("opacity", 0 + $(window).scrollTop() / 750);
 });

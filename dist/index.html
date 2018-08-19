@@ -35,16 +35,17 @@
 
 <!-- Navigation section -->
 
-<body class="text-center">
+<body>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top">
     <a class="navbar-brand">Caitlin C. Johnson</a>
+    <!-- The following button reveals a menu-style list of options on mobile devices -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" data-toggle="modal" data-target="#aboutMeModal">About Me <span class="sr-only">(current)</span></a>
+          <a class="nav-link" data-toggle="modal" data-target="#aboutMeModal" href="#">About Me <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item active">
           <a class="nav-link" href="#portfolio-section">Portfolio<span class="sr-only">(current)</span></a>
@@ -59,67 +60,29 @@
     </div>
   </nav>
 
-  <!-- Contact Me Modal -->
-  <div class="modal fade" id="contactMeModal" tabindex="-1" role="dialog" aria-labelledby="contactMeModal" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLongTitle">Contact Me</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-        </div>
-        <div class="modal-body">
-          <form role="form" method="post" id="reused_form">
-            <div class="form-group">
-              <label for="recipient-name" class="col-form-label">Recipient:</label>
-              <input type="email" class="form-control" id="recipient-name" placeholder="caitlin.ch.johnson@gmail.com" readonly>
-            </div>
-            <div class="form-group">
-              <label for="sender-name" class="col-form-label">Name:</label>
-              <input type="text" class="form-control" id="sender-name" name="sender-name" placeholder="Enter your name" required>
-            </div>
-            <div class="form-group">
-              <label for="sender-email" class="col-form-label">Email Address:</label>
-              <input type="email" class="form-control" id="sender-email" name="sender-email" placeholder="Enter your email address" required>
-            </div>
-            <div class="form-group">
-              <label for="message-text" class="col-form-label">Message:</label>
-              <textarea class="form-control" type=textarea name="message-text" id="message-text"></textarea>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="submit" class="btn btn-primary" name- "contactUsBtn" id="contactUsBtn">Send message</button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <!-- Hero section -->
-  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-    <h1 class="cover-heading">CAITLIN C. JOHNSON</h1>
+  <cover-section>
+    <cover-heading>CAITLIN C. JOHNSON</cover-heading>
     <p>Full-Stack Development | Global Health | Innovation</p>
     <p>
-      <a data-toggle="modal" data-target="#aboutMeModal" class="btn btn-md">About Me</a>
+      <a data-toggle="modal" data-target="#aboutMeModal" class="btn btn-sm">About Me</a>
     </p>
-    <div class="arrow-down bounce">
+    <arrow-down class="bounce">
       <img width="40" height="40" src="assets/homepage/icon-arrow_dropdown.svg" alt="Down Arrow" />
-    </div>
-  </div>
+    </arrow-down>
+  </cover-section>
 
   <!-- About Me Modal -->
   <div class="modal fade" id="aboutMeModal" tabindex="-1" role="dialog" aria-labelledby="aboutMeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">About Me</h5>
+        <modal-header>
+          <modal-title>About Me</modal-title>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
-        </div>
-        <div class="modal-body">
+        </modal-header>
+        <modal-body>
           <img class="modal-img" src="assets/about_me/aboutMePortrait.jpg" alt="Caitlin C Johnson" style="float:left">
           <p>Upon reading the above quote in Your One Word by Evan Carmichael, I had a life-altering self realization that eventually resulted in me leaving a well-paying, stable job at a healthcare management consulting firm to take a leap of faith into
             an area in which I had no expertise in: the startup world. I distinctly remember that moment – I was on an Avianca flight somewhere over Mexico’s Sierra Madre del Sur mountain range on my way back from Bolivia. But before I get into the “why”,
@@ -134,103 +97,89 @@
             perfect balance of utilizing the logical side of the brain and the creative side of the brain, and I decided it was time to take this on as a full-time gig.</p>
           <p>Which leads to why I’m here. I’m hoping to use this medium to showcase my portfolio for full-stack development and to interact with other innovators, developers, and individuals that are also passionate about changing the world. But I also hope
             to use this to share my experiences along the way.</p>
-        </div>
-        <div class="modal-footer">
+        </modal-body>
+        <modal-footer>
           <button type="button" class="btn btn-sm" data-dismiss="modal">Close</button>
-        </div>
+        </modal-footer>
       </div>
     </div>
   </div>
 
   <!-- Portfolio section -->
-  <div class="container" id="portfolio-section">
-    <p class="section-heading">Full-Stack Development Portfolio</p>
-    <div class="container-portfolio" id="scroll">
-      <div class="portfolio-item flip-container" ontouchstart="this.classList.toggle('hover');">
-        <div class="flipper">
-          <img class="portfolio-img front" src="assets/portfolio_section/personal_website.png" alt="Personal Website">
-          <div class="back container">
-            <p style="font-size: 24px; font-family: Nixie One">Personal Website</p>
-            <p>My personal website which consists of both a portfolio section and a blog section. This website acts as an online resume of sorts.</p>
-            <a href="https://github.com/caitlincjohnson/Portfolio" class="btn btn-md">GitHub</a>
-          </div>
+  <section>
+    <section-heading>Full-Stack Development Portfolio</section-heading>
+    <portfolio-item class="flip-container" ontouchstart="this.classList.toggle('hover');">
+      <div class="flipper">
+        <img class="portfolio-img front" src="assets/portfolio_section/personal_website.png" alt="Personal Website">
+        <div class="back container">
+          <p class="portfolio-title">Personal Website</p>
+          <p>My personal website which consists of both a portfolio section and a blog section. This website acts as an online resume of sorts.</p>
+          <a href="https://github.com/caitlincjohnson/Portfolio" class="btn btn-sm">GitHub</a>
         </div>
       </div>
-    </div>
-  </div>
+    </portfolio-item>
+  </section>
 
   <!-- About Me Snippet -->
-  <div class="aboutme-container">
-    <div class="container">
-      <p class="aboutme-text">Hello, I’m Caitlin, a full-stack developer who is endeavoring to amplify my impact within global health through web development. This site showcases select projects and blog posts to demonstrate my talents and experiences. Contact me if you have
-        questions!
-      </p>
-    </div>
-    <div class="aboutme-buttons">
-      <a href="https://drive.google.com/file/d/1cCkAtcBjtFtG3agfognF7JQH9NqoqaVR/view" class="btn btn-md">Resume</a>
-      <a href="https://github.com/caitlincjohnson" class="btn btn-md">GitHub Profile</a>
-      <a href="https://www.linkedin.com/in/caitlin-johnson-92a89b65/" class="btn btn-md">LinkedIn</a>
-    </div>
-  </div>
+  <aboutme-section>
+    <p>Hello, I’m Caitlin, a full-stack developer who is endeavoring to amplify my impact within global health through web development. This site showcases select projects and blog posts to demonstrate my talents and experiences. Contact me if you have questions!
+    </p>
+    <aboutme-buttons>
+      <a href="https://drive.google.com/file/d/1cCkAtcBjtFtG3agfognF7JQH9NqoqaVR/view" class="btn btn-sm">Resume</a>
+      <a href="https://github.com/caitlincjohnson" class="btn btn-sm">GitHub Profile</a>
+      <a href="https://www.linkedin.com/in/caitlin-johnson-92a89b65/" class="btn btn-sm">LinkedIn</a>
+    </aboutme-buttons>
+  </aboutme-section>
 
   <!-- Blog section -->
-  <div class="container" id="blog-section">
-    <p class="section-heading">Personal Blog</p>
-    <div class="container-blog">
-      <div class="blog-item">
+  <section>
+    <section-heading>Personal Blog</section-heading>
+    <section-blog>
+      <blog-item>
         <img class="blog-img" src="assets/blog_section/post1/transition.jpg" alt="The Transition">
         <div class="middle">
-          <a data-toggle="modal" data-target="#blogPost1" class="btn btn-md">Read</a>
+          <a data-toggle="modal" data-target="#blogPost1" class="btn btn-sm">Read</a>
         </div>
-        <div class="container">
-          <p class="blog-title">The Transition</p>
-          <p class="blog-date">June 22, 2018</p>
-          <p class="blog-snippet">If someone told me five years ago that I would be starting my own blog, I would have probably laughed and shrugged it off as a joke. Not that I’m opposed to blogging or similar communications of sorts, but I’m a person of few words. Very few
-            words. My friends and family can attest to […]</p>
-        </div>
-      </div>
-      <div class="blog-item">
+        <blog-title>The Transition</blog-title>
+        <blog-date>June 22, 2018</blog-date>
+        <blog-snippet>If someone told me five years ago that I would be starting my own blog, I would have probably laughed and shrugged it off as a joke. Not that I’m opposed to blogging or similar communications of sorts, but I’m a person of few words. Very few words. My friends and family can attest to […]</blog-snippet>
+      </blog-item>
+      <blog-item>
         <img class="blog-img" src="assets/blog_section/post2/startup_week.jpg" alt="Bigger. Bolder. Global.">
         <div class="middle">
-          <a data-toggle="modal" data-target="#blogPost2" class="btn btn-md">Read</a>
+          <a data-toggle="modal" data-target="#blogPost2" class="btn btn-sm">Read</a>
         </div>
-        <div class="container">
-          <p class="blog-title">Bigger. Bolder. Global.</p>
-          <p class="blog-date">July 8, 2018</p>
-          <p class="blog-snippet">“Entrepreneurship is the window to change the world.” Rob Ryan During my first week of “funemployment”, I decided to get a head start on developing my network by attending a handful of sessions at San Diego Startup Week that took place at the
-            end of June. While there were many valuable takeaways from all of […]</p>
-        </div>
-      </div>
-      <div class="blog-item">
+        <blog-title>Bigger. Bolder. Global.</blog-title>
+        <blog-date>July 8, 2018</blog-date>
+        <blog-snippet>“Entrepreneurship is the window to change the world.” Rob Ryan During my first week of “funemployment”, I decided to get a head start on developing my network by attending a handful of sessions at San Diego Startup Week that took place at the end of June. While there were many valuable takeaways from all of […]</blog-snippet>
+      </blog-item>
+      <blog-item>
         <img class="blog-img" src="assets/blog_section/post3/border.jpg" alt="Build Bridges, Not Walls">
         <div class="middle">
-          <a data-toggle="modal" data-target="#blogPost3" class="btn btn-md">Read</a>
+          <a data-toggle="modal" data-target="#blogPost3" class="btn btn-sm">Read</a>
         </div>
-        <div class="container">
-          <p class="blog-title">Build Bridges, Not Walls</p>
-          <p class="blog-date">July 18, 2018</p>
-          <p class="blog-snippet">And while people far away from the border argue about how to close it off, residents of San Diego and Tijuana are plotting to build bridges across it – by sharing airports, cultural offerings, businesses and even sporting events – so that they
-            can accomplish even more together. Vanishing Frontiers by Andrew Selee As a continuation […]</p>
-        </div>
-      </div>
-    </div>
-  </div>
+        <blog-title>Build Bridges, Not Walls</blog-title>
+        <blog-date>July 18, 2018</blog-date>
+        <blog-snippet>And while people far away from the border argue about how to close it off, residents of San Diego and Tijuana are plotting to build bridges across it – by sharing airports, cultural offerings, businesses and even sporting events – so that they can accomplish even more together. Vanishing Frontiers by Andrew Selee As a continuation […]</blog-snippet>
+      </blog-item>
+    </section-blog>
+  </section>
 
   <!-- Modals for Blog section -->
   <!-- Modal for blog 3 -->
   <div class="modal fade" id="blogPost3" tabindex="-1" role="dialog" aria-labelledby="blogPost3" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
-        <div class="modal-header">
+        <modal-header>
           <div class="container">
-            <h5 class="modal-title">Build Bridges, Not Walls</h5>
+            <modal-title>Build Bridges, Not Walls</modal-title>
             <p>July 18, 2018</p>
           </div>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
         <span aria-hidden="true">&times;</span>
       </button>
-        </div>
-        <div class="modal-body">
+        </modal-header>
+        <modal-body>
           <img class="modal-img" src="assets/blog_section/post3/border.jpg" alt="San Diego Tijuana Border" style="float: left">
           <!-- <blockquote cite="Vanishing Frontiers by Andrew">And while people far away from the border argue about how to close it off, residents of San Diego and Tijuana are plotting to build bridges across it - by sharing airports, cultural offerings, businesses and even sporting events - so that they can accomplish even more together.</blockquote> -->
           <p>As a continuation of my observations about San Diego Startup Week, I wanted to touch upon what I believe is San Diego’s most unique aspect about the city: Tijuana. Yes, I truly believe that the best thing about San Diego has nothing to do with
@@ -267,10 +216,10 @@
           <a href="https://usmex.ucsd.edu/_files/frontera-friday/tijuana-regional-profile-2017.pdf">3. https://usmex.ucsd.edu/_files/frontera-friday/tijuana-regional-profile-2017.pdf</a>
           <p></p>
           <a href="https://www.pwc.com/gx/en/issues/economy/the-world-in-2050.html">4. https://www.pwc.com/gx/en/issues/economy/the-world-in-2050.html</a>
-        </div>
-        <div class="modal-footer">
+        </modal-body>
+        <modal-footer>
           <button type="button" class="btn btn-sm" data-dismiss="modal">Close</button>
-        </div>
+        </modal-footer>
       </div>
     </div>
   </div>
@@ -279,16 +228,16 @@
   <div class="modal fade" id="blogPost2" tabindex="-1" role="dialog" aria-labelledby="blogPost2" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
-        <div class="modal-header">
+        <modal-header>
           <div class="container">
-            <h5 class="modal-title">Bigger. Bolder. Global.</h5>
+            <modal-title>Bigger. Bolder. Global.</modal-title>
             <p>July 8, 2018</p>
           </div>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
         <span aria-hidden="true">&times;</span>
       </button>
-        </div>
-        <div class="modal-body">
+        </modal-header>
+        <modal-body>
           <img class="modal-img" src="assets/blog_section/post2/startup_week.jpg" alt="San Diego Startup Week Badge" style="float: left">
           <p>During my first week of “funemployment”, I decided to get a head start on developing my network by attending a handful of sessions at San Diego Startup Week that took place at the end of June. While there were many valuable takeaways from all
             of the sessions that I attended – which I will most likely reference in future posts – the one that really hit home was Rob Ryan’s “How to Build a Global Startup” session on June 26. I was attracted to this session since I have aspirations
@@ -307,10 +256,10 @@
           <span>Twitter:<a href="https://twitter.com/IAmRobRyan">@IAmRobRyan</a></span>
           <p></p>
           <span>Instagram:<a href="https://www.instagram.com/iamrobryan/?hl=en">@IAmRobRyan</a></span>
-        </div>
-        <div class="modal-footer">
+        </modal-body>
+        <modal-footer>
           <button type="button" class="btn btn-sm" data-dismiss="modal">Close</button>
-        </div>
+        </modal-footer>
       </div>
     </div>
   </div>
@@ -319,16 +268,16 @@
   <div class="modal fade" id="blogPost1" tabindex="-1" role="dialog" aria-labelledby="blogPost1" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
-        <div class="modal-header">
+        <modal-header>
           <div class="container">
-            <h5 class="modal-title">The Transition.</h5>
+            <modal-title>The Transition.</modal-title>
             <p>June 22, 2018</p>
           </div>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
         <span aria-hidden="true">&times;</span>
       </button>
-        </div>
-        <div class="modal-body">
+        </modal-header>
+        <modal-body>
           <img class="modal-img" src="assets/blog_section/post1/transition.jpg" alt="Transition" style="float: left">
           <p>If someone told me five years ago that I would be starting my own blog, I would have probably laughed and shrugged it off as a joke. Not that I’m opposed to blogging or similar communications of sorts, but I’m a person of few words.</p>
           <p>Very few words.</p>
@@ -341,24 +290,22 @@
             Going from consulting to programming may seem like a huge jump, but in reality I’ve been programming here and there over the past ten years, so the concepts aren’t foreign to me.</p>
           <p>Which leads to why I’m here. I’m hoping to use this medium to showcase my portfolio for full-stack development and to interact with other innovators, developers, and individuals that are also passionate about changing the world. But I also hope
             to use this to share my experiences along the way.</p>
-        </div>
-        <div class="modal-footer">
+        </modal-body>
+        <modal-footer>
           <button type="button" class="btn btn-sm" data-dismiss="modal">Close</button>
-        </div>
+        </modal-footer>
       </div>
     </div>
   </div>
 
   <!-- Contact Me Section -->
-  <div class="contactme-container">
-    <p class="contactme-heading">Contact Me</p>
-    <div class="container">
-      <img class="portrait-img" src="assets/homepage/portrait.jpg" alt="Caitlin C Johnson">
-      <p class="contactme-text1">Caitlin C. Johnson</p>
-      <p class="contactme-text2">San Diego, California, USA</p>
-      <a class="contactme-text2" href="mailto:caitlin.ch.johnson@gmail.com">caitlin.ch.johnson@gmail.com</a>
-    </div>
-  </div>
+  <contactme-section>
+    <section-heading id="contactme-heading">Contact Me</section-heading>
+    <img id="contactme-img" src="assets/homepage/portrait.jpg" alt="Caitlin C Johnson">
+    <p>Caitlin C. Johnson</p>
+    <p>San Diego, California, USA</p>
+    <a href="mailto:caitlin.ch.johnson@gmail.com">caitlin.ch.johnson@gmail.com</a>
+  </contactme-section>
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->

@@ -18,6 +18,7 @@ html, body {
   font-family: 'Open Sans', sans-serif;
   font-size: 18px;
   color: #fff;
+  text-align: center;
 }
 
 @media only screen and (min-width: 768px) {
@@ -27,12 +28,49 @@ html, body {
 }
 
 /*
+General section structure
+*/
+
+section-heading {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  width: 100vw;
+  font-family: "Nixie One";
+  font-size: 2rem;
+  color: #000;
+}
+
+/* large screens */
+
+@media only screen and (min-width: 768px) {
+  section-heading {
+    font-size: 2.25rem;
+  }
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-bottom: 5%;
+  justify-content: center;
+}
+
+/* large screens */
+
+@media only screen and (min-width: 768px) {
+  .container-portfolio {
+    justify-content: space-between;
+  }
+}
+
+/*
 Button
 */
 
 .btn {
   margin: 1rem;
-  background:#46adb1;
+  background: #46adb1;
   color: #fff;
 }
 
@@ -45,31 +83,12 @@ Navigation Bar
   opacity: 0;
 }
 
-.nav-link {
-  padding: .25rem 0;
-  font-weight: 700;
-  color: rgba(255, 255, 255, .5);
-  background-color: transparent;
-  border-bottom: .25rem solid transparent;
-}
-
-.nav-link:hover, .nav-link:focus {
-  border-bottom-color: rgba(255, 255, 255, .25);
-}
-
-.nav-link+.nav-link {
-  margin-left: 1rem;
-}
-
-.active {
-  color: #fff;
-  border-bottom-color: #fff;
-  font-size: .8rem;
-}
-
 @media only screen and (min-width: 768px) {
-  .active {
-    font-size: .8rem;
+  .nav-link {
+    border-bottom: .25rem solid transparent;
+  }
+  .nav-link:hover, .nav-link:focus {
+    border-bottom-color: rgba(255, 255, 255, .25);
   }
 }
 
@@ -77,54 +96,47 @@ Navigation Bar
 Cover section
 */
 
-.cover-container {
+cover-section {
+  display: flex;
+  flex-direction: column;
   background-attachment: scroll;
+  height: 100vh;
+  width: auto;
   object-fit: cover;
   background-image: url(assets/homepage/background.jpg);
   background-repeat: no-repeat;
   background-position: center;
+  justify-content: center;
+  object-fit: scale-down;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  justify-content: center;
-  object-fit: scale-down;
+}
+
+cover-heading {
+  font-family: "Nixie One";
+  font-size: 3rem;
 }
 
 /* large screens */
 
 @media only screen and (min-width: 768px) {
-  .cover-container {
+  cover-section {
     background-attachment: fixed;
   }
-}
-
-.cover-heading {
-  font-family: "Nixie One";
-  font-size: 2rem;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: 400;
-  text-align: center;
-}
-
-/* large screens */
-
-@media only screen and (min-width: 768px) {
-  .cover-heading {
-    font-size: 2.8rem;
+  cover-heading {
+    font-size: 3rem;
   }
 }
 
 /* arrow bounce */
 
-.arrow-down {
+arrow-down {
   position: absolute;
   bottom: 0;
   left: 50%;
-  margin-left: -2rem;
-  width: 40px;
-  height: 60px;
+  margin-left: -1rem;
 }
 
 .bounce {
@@ -188,51 +200,16 @@ Cover section
 Portfolio section
 */
 
-.container-portfolio {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin-bottom: 5%;
-  justify-content: center;
-}
-
-/* large screens */
-
-@media only screen and (min-width: 768px) {
-  .container-portfolio {
-    justify-content: space-between;
-  }
-}
-
-.section-heading {
-  margin-top: 5%;
-  margin-bottom: 5%;
-  font-family: "Nixie One";
-  font-size: 1.4rem;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: 400;
-  color: #000;
-}
-
-/* large screens */
-
-@media only screen and (min-width: 768px) {
-  .section-heading {
-    font-size: 2,25rem;
-  }
-}
-
-.portfolio-item {
+portfolio-item {
   background-color: inherit;
   max-width: 300px;
+  margin: 1rem;
 }
 
 .portfolio-img {
   object-fit: cover;
   height: 300px;
   width: 300px;
-  position: center;
   background-clip: context-box;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
@@ -294,7 +271,7 @@ Portfolio section
 About Me Snippet
 */
 
-.aboutme-container {
+aboutme-section {
   background-image: url(assets/homepage/portrait3.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -309,39 +286,34 @@ About Me Snippet
   justify-content: center;
   background-attachment: scroll;
   object-fit: scale-down;
-  padding-top: 30%;
-  padding-bottom: 30%;
+  padding: 2rem;
 }
 
-/* large screens */
-
-@media only screen and (min-width: 768px) {
-  .aboutme-container {
-    background-attachment: fixed;
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-}
-
-.aboutme-text {
-  align-content: center;
-  align-items: center;
-}
-
-.aboutme-buttons {
+aboutme-buttons {
   display: flex;
   flex-wrap: wrap;
   margin-top: .5rem;
   justify-content: center;
-  flex-direction: column;
+  flex-direction: row;
+  width: 100vw;
 }
 
 /* large screens */
 
 @media only screen and (min-width: 768px) {
-  .aboutme-buttons {
+  aboutme-section {
+    background-attachment: fixed;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  aboutme-buttons {
     flex-direction: row;
   }
+}
+
+.portfolio-title {
+  font-size: 24px;
+  font-family: "Nixie One"
 }
 
 /*
@@ -350,7 +322,7 @@ Blog section
 
 /* blog card item */
 
-.container-blog {
+section-blog {
   display: flex;
   flex-direction: row-reverse;
   flex-wrap: wrap-reverse;
@@ -358,11 +330,13 @@ Blog section
   justify-content: center;
 }
 
-.blog-item {
+blog-item {
   background-color: inherit;
   max-width: 350px;
   margin-left: .5rem;
   margin-right: .5rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .blog-img {
@@ -375,20 +349,20 @@ Blog section
   transition: 0.3s;
 }
 
-.blog-title {
+blog-title {
   color: #000;
-  text-align: left;
   font-size: 1.2rem;
+  text-align: left;
 }
 
-.blog-date {
+blog-date {
   margin-top: .2rem;
   color: #000;
   font-size: .5rem;
   text-align: left;
 }
 
-.blog-snippet {
+blog-snippet {
   margin-top: 1rem;
   color: #000;
   font-size: .8rem;
@@ -408,28 +382,28 @@ Blog section
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
   }
-  .blog-title {
+  blog-title {
     font-size: 1.2rem;
   }
-  .blog-date {
+  blog-date {
     font-size: 0.5rem;
   }
-  .blog-snippet {
+  blog-snippet {
     font-size: 0.8rem;
   }
-  .blog-item:hover .blog-img {
+  blog-item:hover .blog-img {
     opacity: 0.3;
     filter: grayscale(100%);
   }
-  .blog-item:hover .middle {
+  blog-item:hover .middle {
     opacity: 1;
   }
   .middle {
     transition: .5s ease;
     opacity: 0;
     position: relative;
-    transform: translate(0, -300%);
-    -ms-transform: translate(0, -300%);
+    transform: translate(0, -250%);
+    -ms-transform: translate(0, -250%);
     text-align: center;
   }
 }
@@ -465,8 +439,8 @@ Blog section
 Contact Me section
 */
 
-.contactme-container {
-  align-content: center;
+contactme-section {
+  align-items: center;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -474,49 +448,28 @@ Contact Me section
   background-color: #333;
   color: black;
   padding-bottom: 2%;
-}
-
-.contactme-heading {
-  margin-top: 5%;
-  margin-bottom: 3%;
-  font-family: "Nixie One";
-  font-size: 1.4rem;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: 400;
   color: #fff;
 }
 
-.contactme-text1 {
-  align-content: center;
-  align-items: center;
+contactme-section>p, a {
   font-size: 0.8rem;
+}
+
+#contactme-heading {
   color: #fff;
 }
 
-.contactme-text2 {
-  align-content: center;
-  align-items: center;
-  font-size: 0.6rem;
-  color: #fff;
-}
-
-.portrait-img {
-  margin-bottom: 5%;
+#contactme-img {
+  margin-bottom: 1rem;
   border-radius: 50%;
+  height: 20vh;
 }
 
 /* large screens */
 
 @media only screen and (min-width: 768px) {
-  .contactme-heading {
-    font-size: 1.4rem;
-  }
-  .contactme-text1 {
+  contactme-section>p, a {
     font-size: 0.8rem;
-  }
-  .contactme-text2 {
-    font-size: 0.6rem;
   }
 }
 
@@ -524,99 +477,7 @@ Contact Me section
 Modals
 */
 
-.modal {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1050;
-  display: none;
-  overflow: hidden;
-  outline: 0;
-  background-color: rgba(51, 51, 51, 0.5);
-  color: #000;
-}
-
-.modal-dialog {
-  position: relative;
-  margin: 1rem;
-  pointer-events: none;
-}
-
-.modal.fade .modal-dialog {
-  transition: -webkit-transform 0.3s ease-out;
-  transition: transform 0.3s ease-out;
-  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
-  -webkit-transform: translate(0, -25%);
-  transform: translate(0, -25%);
-}
-
-@media screen and (prefers-reduced-motion: reduce) {
-  .modal.fade .modal-dialog {
-    transition: none;
-  }
-}
-
-.modal.show .modal-dialog {
-  -webkit-transform: translate(0, 0);
-  transform: translate(0, 0);
-}
-
-.modal-dialog-centered {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: calc(100% - (0.5rem * 2));
-}
-
-.modal-dialog-centered::before {
-  display: block;
-  height: calc(100vh - (0.5rem * 2));
-  content: "";
-}
-
-.modal-content {
-  position: relative;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  width: 97%;
-  pointer-events: auto;
-  background-color: #fff;
-  background-clip: padding-box;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 0.3rem;
-  outline: 0;
-}
-
-@media only screen and (min-width: 768px) {
-  .modal-content {
-    font-size: 0.9rem;
-  }
-}
-
-.modal-backdrop {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1040;
-  background-color: #000;
-}
-
-.modal-backdrop.fade {
-  opacity: 0;
-}
-
-.modal-backdrop.show {
-  opacity: 0.5;
-}
-
-.modal-header {
+modal-header {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: start;
@@ -630,26 +491,13 @@ Modals
   color: #000;
 }
 
-.modal-header .close {
-  padding: 1rem;
-  margin: -1rem -1rem -1rem auto;
-}
-
-.modal-title {
-  margin-bottom: 0;
-  line-height: 1.5;
+modal-title {
   font-size: 1.5rem;
   padding-left: 1rem;
   font-family: "Nixie One"
 }
 
-@media only screen and (min-width: 768px) {
-  .modal-title {
-    font-size: 1.8rem;
-  }
-}
-
-.modal-body {
+modal-body {
   position: relative;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -660,33 +508,16 @@ Modals
   color: #000;
 }
 
-.modal-footer {
+modal-footer {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
   align-items: center;
   -ms-flex-pack: end;
   justify-content: flex-end;
-  padding: 1rem;
   border-top: 1px solid #e9ecef;
   background-color: rgba(211, 206, 206, 0.5);
   color: #000;
-}
-
-.modal-footer> :not(:first-child) {
-  margin-left: .25rem;
-}
-
-.modal-footer> :not(:last-child) {
-  margin-right: .25rem;
-}
-
-.modal-scrollbar-measure {
-  position: absolute;
-  top: -9999px;
-  width: 50px;
-  height: 50px;
-  overflow: scroll;
 }
 
 .modal-img {
@@ -695,33 +526,18 @@ Modals
   margin-bottom: 5%;
 }
 
-@media only screen and (min-width: 768px) {
-  .modal-img {
-    height: 450px;
-    width: auto;
-    margin: 1rem auto;
+@media (min-width: 768px) {
+  modal-title {
+    font-size: 1.8rem;
   }
-}
-
-@media (min-width: 576px) {
-  .modal-dialog {
-    max-width: 90%;
-    margin: 1.75rem auto;
-  }
-  .modal-dialog-centered {
-    min-height: calc(100% - (1.75rem * 2));
-  }
-  .modal-dialog-centered::before {
-    height: calc(100vh - (1.75rem * 2));
+  .modal-content {
+    font-size: 0.9rem;
   }
   .modal-img {
     height: auto;
-    width: 50%;
+    width: 30vw;
     margin: .5rem;
   }
-}
-
-@media (min-width: 992px) {
   .modal-lg {
     max-width: 80%;
   }
