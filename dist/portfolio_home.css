@@ -208,11 +208,12 @@ portfolio-item {
 }
 
 portfolio-title {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-family: "Nixie One"
 }
 
 .portfolio-text {
+  margin-top: .8rem;
   font-size: .8rem;
 }
 
@@ -228,7 +229,7 @@ portfolio-title {
 .back {
   background-color: #333;
   color: inherit;
-  padding-top: 5%;
+  padding: 5%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -236,7 +237,14 @@ portfolio-title {
 
 @media only screen and (min-width: 768px) {
   /* entire container, keeps perspective */
+  portfolio-title {
+    font-size: 1.2rem;
+    font-family: "Nixie One"
+  }
 
+  .portfolio-text {
+    font-size: .8rem;
+  }
 
   .flip-container {
     perspective: 1000px;
@@ -385,6 +393,7 @@ blog-snippet {
     transition: 0.3s;
   }
   blog-title {
+    margin-top: .5rem;
     font-size: 1.2rem;
   }
   blog-date {
