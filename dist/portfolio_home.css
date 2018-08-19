@@ -31,7 +31,7 @@ Button
 */
 
 .btn {
-  margin: 10px;
+  margin: 1rem;
   background:#46adb1;
   color: #fff;
 }
@@ -122,7 +122,7 @@ Cover section
   position: absolute;
   bottom: 0;
   left: 50%;
-  margin-left: -20px;
+  margin-left: -2rem;
   width: 40px;
   height: 60px;
 }
@@ -331,7 +331,7 @@ About Me Snippet
 .aboutme-buttons {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 30px;
+  margin-top: .5rem;
   justify-content: center;
   flex-direction: column;
 }
@@ -361,8 +361,8 @@ Blog section
 .blog-item {
   background-color: inherit;
   max-width: 350px;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: .5rem;
+  margin-right: .5rem;
 }
 
 .blog-img {
@@ -382,18 +382,18 @@ Blog section
 }
 
 .blog-date {
-  margin-top: 3px;
+  margin-top: .2rem;
   color: #000;
   font-size: .5rem;
   text-align: left;
 }
 
 .blog-snippet {
-  margin-top: 10px;
+  margin-top: 1rem;
   color: #000;
   font-size: .8rem;
   text-align: left !important;
-  margin-bottom: 30px;
+  margin-bottom: 1.5rem;
 }
 
 /* large screens */
@@ -699,7 +699,7 @@ Modals
   .modal-img {
     height: 450px;
     width: auto;
-    margin: 15px;
+    margin: 1rem auto;
   }
 }
 
@@ -717,7 +717,7 @@ Modals
   .modal-img {
     height: auto;
     width: 50%;
-    margin: 15px;
+    margin: .5rem;
   }
 }
 
