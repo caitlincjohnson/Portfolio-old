@@ -31,6 +31,15 @@ html, body {
 General section structure
 */
 
+section {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-bottom: 5%;
+  justify-content: center;
+  align-items: center;
+}
+
 section-heading {
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -43,24 +52,11 @@ section-heading {
 /* large screens */
 
 @media only screen and (min-width: 768px) {
+  section {
+    justify-content: space-between;
+  }
   section-heading {
     font-size: 2.25rem;
-  }
-}
-
-section {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  margin-bottom: 5%;
-  justify-content: center;
-}
-
-/* large screens */
-
-@media only screen and (min-width: 768px) {
-  .container-portfolio {
-    justify-content: space-between;
   }
 }
 
@@ -71,7 +67,7 @@ Button
 .btn {
   margin: 1rem;
   background: #46adb1;
-  color: #fff;
+  color: #fff !important;
 }
 
 /*
@@ -337,6 +333,7 @@ blog-item {
   margin-right: .5rem;
   display: flex;
   flex-direction: column;
+  color: #000;
 }
 
 .blog-img {
@@ -350,24 +347,21 @@ blog-item {
 }
 
 blog-title {
-  color: #000;
+  margin-top: -2rem;
   font-size: 1.2rem;
   text-align: left;
 }
 
 blog-date {
   margin-top: .2rem;
-  color: #000;
   font-size: .5rem;
   text-align: left;
 }
 
 blog-snippet {
   margin-top: 1rem;
-  color: #000;
   font-size: .8rem;
-  text-align: left !important;
-  margin-bottom: 1.5rem;
+  text-align: left;
 }
 
 /* large screens */
